@@ -1,4 +1,5 @@
-﻿using SOLID_Principles.DomainModels.Rich;
+﻿using SOLID_Principles.ExtensionMethods;
+using SOLID_Principles.DomainModels.Rich;
 using SOLID_Principles.DomainModels.Anemic;
 
 void AnemicClient()
@@ -33,7 +34,27 @@ void RichClientWithDomainException()
         $"Address: {client.Address}\n");
 }
 
+void StringExtension()
+{
+    string text1 = "first text";
+    string text2 = "second text";
+    string text3 = "";
 
-AnemicClient();
-RichClient();
-RichClientWithDomainException();
+    text1 = text1.UpperStringFirstLetter();
+    text2 = text2.UpperStringFirstLetter();
+    text3 = text3.UpperStringFirstLetter();
+
+    Console.WriteLine($"New Text 1: {text1}");
+    Console.WriteLine($"New Text 2: {text2}");
+    Console.WriteLine($"New Text 3: {text3}");
+}
+
+// Main
+
+// Domain Models
+// AnemicClient();
+// RichClient();
+// RichClientWithDomainException();
+
+// ExtensionMethods
+StringExtension();
