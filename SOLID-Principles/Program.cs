@@ -49,8 +49,6 @@ void StringExtension()
     Console.WriteLine($"New Text 3: {text3}");
 }
 
-// Main
-
 // Domain Models
 // AnemicClient();
 // RichClient();
